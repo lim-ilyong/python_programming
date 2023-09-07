@@ -7,5 +7,6 @@
 ## Exercise 4 (Types): Expression
 ## Exercise 5 (Types): Expression and Variables in Python
 
-
+2주차 숙제2
+## Exercise Strings 1
   
