@@ -1,0 +1,1919 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/lim-ilyong/python_programming/blob/main/Strings(%ED%95%99%EC%83%9D%EC%9A%A9).ipynb/hw1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "aJtdELew_Lo0"
+      },
+      "source": [
+        "<h1>String Operations</h1>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "FeUvekd1_Lo0"
+      },
+      "source": [
+        "<p><strong>Welcome!</strong> This notebook will teach you about the string operations in the Python Programming Language. By the end of this notebook, you'll know the basics string operations in Python, including indexing, escape sequences and operations.</p>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "71qUvVXh_Lo1"
+      },
+      "source": [
+        "<h2 id=\"strings\">What are Strings?</h2>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "dJGxpTzN_Lo1"
+      },
+      "source": [
+        "The following example shows a string contained within 2 quotation marks:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "KMSSn6QP_Lo1",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "e2e2726f-b209-4313-d97b-93eaa0a4187f"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Michael Jackson'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 1
+        }
+      ],
+      "source": [
+        "# Use quotation marks for defining string\n",
+        "\n",
+        "\"Michael Jackson\" #\"\" ''"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "P7n-0-ht_Lo2"
+      },
+      "source": [
+        "We can also use single quotation marks:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "id": "OSKcp8rg_Lo2",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "3b278248-7398-4c39-d15f-fde2fef65558"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Michael Jackson'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ],
+      "source": [
+        "# Use single quotation marks for defining string\n",
+        "\n",
+        "'Michael Jackson'"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "T7e21Khv_Lo2"
+      },
+      "source": [
+        "A string can be a combination of spaces and digits:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "id": "vY2c7pAq_Lo2",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "7c0a7c6d-eac6-4930-9bf9-209950e1ebf1"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'1 2 3 4 5 6 '"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ],
+      "source": [
+        "# Digitals and spaces in string\n",
+        "\n",
+        "'1 2 3 4 5 6 '"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "'123456'"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "tHoYastyozzl",
+        "outputId": "ff97bdd1-eb23-44e2-8767-6bcbafb7cc1a"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'123456'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6i5iOrEh_Lo2"
+      },
+      "source": [
+        "A string can also be a combination of special characters :"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 5,
+      "metadata": {
+        "id": "6LwujpRS_Lo2",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "5b434e59-4139-4fb1-afb1-a665bbd827b3"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'@#2_#]&*^%$'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 5
+        }
+      ],
+      "source": [
+        "# Special characters in string\n",
+        "\n",
+        "'@#2_#]&*^%$'"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "TCrOipej_Lo3"
+      },
+      "source": [
+        "We can print our string using the print statement:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 6,
+      "metadata": {
+        "id": "yC3ll8ye_Lo3",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "8b20b836-b9a5-4d7f-c27f-a30bcdb9b9a6"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "hello!\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Print the string\n",
+        "\n",
+        "print(\"hello!\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9xWhYCW5_Lo3"
+      },
+      "source": [
+        "We can bind or assign a string to another variable:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 7,
+      "metadata": {
+        "id": "fI54RY3z_Lo3",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "944cee56-6f59-4d50-d5d8-a7b59a282feb"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Michael Jackson'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 7
+        }
+      ],
+      "source": [
+        "# Assign string to variable\n",
+        "\n",
+        "Name = \"Michael Jackson\"\n",
+        "Name"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# bind two strings to one variable\n",
+        "\n",
+        "Age = \" 35\" #문자열 \"\"\n",
+        "\n",
+        "Name + Age"
+      ],
+      "metadata": {
+        "id": "LXb91fsb_hDa",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "12554ed7-8975-4c6f-f724-4595b7d1df83"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Michael Jackson 35'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "uaHK6wsj_Lo3"
+      },
+      "source": [
+        "<hr>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "EnN-6Ioq_Lo3"
+      },
+      "source": [
+        "<h2 id=\"index\">Indexing (너무 너무 많이 사용됨) </h2>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9ZOp95qM_Lo3"
+      },
+      "source": [
+        "It is helpful to think of a string as an ordered sequence. Each element in the sequence can be accessed using an index represented by the array of numbers:  "
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ypeaj_na_Lo3"
+      },
+      "source": [
+        "<img src=\"https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/PY0101EN/Chapter%201/Images/StringsIndex.png\" width=\"600\" align=\"center\" />"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "vf2lXJ3m_Lo4"
+      },
+      "source": [
+        " The first index can be accessed as follows:"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "hNj6Osht_Lo4"
+      },
+      "source": [
+        "<hr/>\n",
+        "<div class=\"alert alert-success alertsuccess\" style=\"margin-top: 20px\">\n",
+        "[Tip]: Because indexing starts at 0, it means the first index is on the index 0.\n",
+        "</div>\n",
+        "<hr/>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 9,
+      "metadata": {
+        "id": "n9rfKMSr_Lo4",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "0a038e58-01b1-440b-edb4-05d4b9f8223f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "i\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Print the first element in the string\n",
+        "\n",
+        "print(Name[1])"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3gK8EuJK_Lo4"
+      },
+      "source": [
+        " We can access index 6:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 10,
+      "metadata": {
+        "id": "bbB7vwCu_Lo4",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4d7731d2-54be-4c06-cb65-af7990cde0f4"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "l\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Print the element on index 6 in the string\n",
+        "\n",
+        "print(Name[6])"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "VosBpNqU_Lo4"
+      },
+      "source": [
+        "Moreover, we can access the 13th index:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 11,
+      "metadata": {
+        "id": "lvbMeEIm_Lo4",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e1457462-f95c-4f8e-98ce-a4b6928bf4b5"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "o\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Print the element on the 13th index in the string\n",
+        "\n",
+        "print(Name[13])"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "1ir1yIGR_Lo4"
+      },
+      "source": [
+        "<h3 id=\"neg\">Negative Indexing</h3>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "imtW3sjo_Lo4"
+      },
+      "source": [
+        " We can also use negative indexing with strings:"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5MlqwwqA_Lo4"
+      },
+      "source": [
+        "<img src=\"https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/PY0101EN/Chapter%201/Images/StringsNeg.png\" width=\"600\" align=\"center\" />"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0izGKzad_Lo4"
+      },
+      "source": [
+        "Negative index can help us to count the element from the end of the string."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "RIrX8L9p_Lo5"
+      },
+      "source": [
+        "The last element is given by the index -1:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 13,
+      "metadata": {
+        "id": "vNwA0F5N_Lo5",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "31f37ce2-fa18-44fe-cb14-340468dd98d4"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "M\n",
+            "M\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Print the last element in the string\n",
+        "\n",
+        "print(Name[-15])\n",
+        "print(Name[0]) #인덱스에 사용하는 괄호는 대괄호 []"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "TtSb4fkC_Lo5"
+      },
+      "source": [
+        " The first element can be obtained by  index -15:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 14,
+      "metadata": {
+        "id": "X2Xk06ie_Lo5",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "811418d3-a217-4af9-c84a-fd7ea4b2535c"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "M\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Print the first element in the string\n",
+        "\n",
+        "print(Name[-15])"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "kR-q-IDV_Lo5"
+      },
+      "source": [
+        "We can find the number of characters in a string by using <code>len</code>, short for length:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 15,
+      "metadata": {
+        "id": "2UhXteHR_Lo5",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "543a2c45-2395-477c-a138-e28b1f79bc5d"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "15"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 15
+        }
+      ],
+      "source": [
+        "# Find the length of string\n",
+        "# 이 함수 length도 자주 사용함\n",
+        "\n",
+        "len(\"Michael Jackson\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Yjl2GMc1_Lo5"
+      },
+      "source": [
+        "<h3 id=\"slice\">Slicing</h3>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Mia9gSUd_Lo5"
+      },
+      "source": [
+        "We can obtain multiple characters from a string using slicing, we can obtain the 0 to 4th and 8th to the 12th element:  "
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "lH8FkM_Z_Lo5"
+      },
+      "source": [
+        "<img src=\"https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/PY0101EN/Chapter%201/Images/StringsSlice.png\" width=\"600\" align=\"center\" />"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cbFB_PT3_Lo5"
+      },
+      "source": [
+        "<hr/>\n",
+        "<div class=\"alert alert-success alertsuccess\" style=\"margin-top: 20px\">\n",
+        "[Tip]: When taking the slice, the first number means the index (start at 0), and the second number means the index just before the next index (e.g., the index of \"k\" equals to 11, and the next index is 12, so Name[8:12] = \"Jack\")\n",
+        "</div>\n",
+        "<hr/>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 16,
+      "metadata": {
+        "id": "qpfbWZsb_Lo6",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "b92e0a69-6e37-4e35-e77a-57619e648ace"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Mich'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 16
+        }
+      ],
+      "source": [
+        "# Take the slice on variable Name with only index 0 to index 3\n",
+        "# 자주 사용함..\n",
+        "\n",
+        "Name[0:4]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 17,
+      "metadata": {
+        "id": "7wEE8woC_Lo6",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "68305f69-0bdd-4d6c-8ec0-8ffbb4aababa"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'ack'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 17
+        }
+      ],
+      "source": [
+        "# Take the slice on variable Name with only index 8 to index 11\n",
+        "\n",
+        "Name[9:12]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0_v2beI5_Lo6"
+      },
+      "source": [
+        "<h3 id=\"stride\">Stride</h3>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "El2dTwQM_Lo6"
+      },
+      "source": [
+        " We can also  input a stride value as follows, with the '2' indicating that we are selecting every second variable:"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3lHF89n2_Lo6"
+      },
+      "source": [
+        "<img src=\"https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/PY0101EN/Chapter%201/Images/StringsStride.png\" width=\"600\" align=\"center\" />"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 18,
+      "metadata": {
+        "id": "HiUfzZWW_Lo6",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "fba22521-a0b0-472f-b3c7-d88deb79c716"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'McalJcsn'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 18
+        }
+      ],
+      "source": [
+        "# Get every second element. The elments on index 1, 3, 5 ...\n",
+        "\n",
+        "Name[::2]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "F6lN600a_Lo6"
+      },
+      "source": [
+        "We can also incorporate slicing  with the stride. In this case, we select the first five elements and then use the stride:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 41,
+      "metadata": {
+        "id": "BE9ENTxh_Lo6",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "89185695-d68f-4656-eb0b-da31759e0d00"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Mcal'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 41
+        }
+      ],
+      "source": [
+        "# Get every second element in the range from index 0 to index 4\n",
+        "\n",
+        "Name[0:7:2]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "DJ1-ViKj_Lo6"
+      },
+      "source": [
+        "<h3 id=\"concat\">Concatenate Strings</h3>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "jezR5M2x_Lo7"
+      },
+      "source": [
+        "We can concatenate or combine strings by using the addition symbols, and the result is a new string that is a combination of both:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 20,
+      "metadata": {
+        "id": "bWRgQd-y_Lo7",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "a2045265-fc58-4ab2-db3e-5e02722f8b5f"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Michael Jackson is the best'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 20
+        }
+      ],
+      "source": [
+        "# Concatenate two strings\n",
+        "\n",
+        "Statement = Name + \" is the best\"\n",
+        "Statement"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "rTB1ucJE_Lo7"
+      },
+      "source": [
+        "To replicate values of a string we simply multiply the string by the number of times we would like to replicate it. In this case, the number is three. The result is a new string, and this new string consists of three copies of the original string:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "SPQ79-QQ_Lo7",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "7491e09e-6ef1-4022-ab57-b39db2ff75ac"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Michael Jackson Michael Jackson Michael Jackson '"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 36
+        }
+      ],
+      "source": [
+        "# Print the string for 3 times\n",
+        "\n",
+        "3 * \"Michael Jackson \""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "8FXJAhU8_Lo7"
+      },
+      "source": [
+        "You can create a new string by setting it to the original variable. Concatenated  with a new string, the result is a new string that changes from Michael Jackson to “Michael Jackson is the best\".\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 22,
+      "metadata": {
+        "id": "kvgTPCAB_Lo7",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "3c68a5f3-6fd2-43f6-c7b3-f22efd6da688"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Michael Jackson is the best'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 22
+        }
+      ],
+      "source": [
+        "# Concatenate strings\n",
+        "\n",
+        "Name = \"Michael Jackson\"\n",
+        "Name = Name + \" is the best\"\n",
+        "Name"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "RezBOVGH_Lo7"
+      },
+      "source": [
+        "<hr>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "XpG_ihzZ_Lo7"
+      },
+      "source": [
+        "<h2 id=\"escape\">Escape Sequences</h2>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "rvEomesU_Lo7"
+      },
+      "source": [
+        "Back slashes represent the beginning  of escape sequences. Escape sequences represent strings that may be difficult to input. For example, back slash \"n\" represents a new line. The output is given by a new line after the back slash \"n\" is encountered:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 23,
+      "metadata": {
+        "id": "LH7FdCJH_Lo8",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c6264d35-3e3d-4ac9-f111-de4fed96132a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Michael Jackson \n",
+            " is the best\n"
+          ]
+        }
+      ],
+      "source": [
+        "# New line escape sequence\n",
+        "\n",
+        "print(\" Michael Jackson \\n is the best\" )"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "CyJkEEzf_Lo8"
+      },
+      "source": [
+        "Similarly, back slash  \"t\" represents a tab:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 24,
+      "metadata": {
+        "id": "xKKpcwZF_Lo8",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "1d54c7b8-c9fb-4b35-dc7a-0cf1b5da8b99"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Michael Jackson \t is the best \n",
+            "\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Tab escape sequence\n",
+        "\n",
+        "print(\" Michael Jackson \\t is the best \\n\" )"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "EZnRhqUj_Lo8"
+      },
+      "source": [
+        " If you want to place a back slash in your string, use a double back slash:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 31,
+      "metadata": {
+        "id": "IiBy3gNr_Lo8",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ccf7d378-b358-4cc6-874c-b102db487128"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Michael Jackson \\ is the best\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Include back slash in string\n",
+        "\n",
+        "print(\" Michael Jackson \\ is the best\" )"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0UzyVlxw_Lo8"
+      },
+      "source": [
+        "<hr>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "-ymXj1mj_Lo8"
+      },
+      "source": [
+        "<h2 id=\"operations\">String Operations</h2>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "gTbz8xXl_Lo8"
+      },
+      "source": [
+        "There are many string operation methods in Python that can be used to manipulate the data. We are going to use some basic string operations on the data."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "MJsa4-QB_Lo9"
+      },
+      "source": [
+        "Let's try with the method <code>upper</code>; this method converts lower case characters to upper case characters:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 33,
+      "metadata": {
+        "id": "zKUXgnmQ_Lo9",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "333a0a6f-fb16-440a-b8b7-65e7ceb54ef9"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "before upper: Thriller is the sixth studio album\n",
+            "After upper: THRILLER IS THE SIXTH STUDIO ALBUM\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Convert all the characters in string to upper case\n",
+        "\n",
+        "A = \"Thriller is the sixth studio album\"\n",
+        "print(\"before upper:\", A)\n",
+        "B = A.upper()\n",
+        "#  #A라는 문자열을 모두 대문자로 바꿔라. A.upper()\n",
+        "print(\"After upper:\", B)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "y7XYrqU6_Lo9"
+      },
+      "source": [
+        "The method <code>replace</code> replaces a segment of the string, i.e. a substring  with a new string. We input the part of the string we would like to change. The second argument is what we would like to exchange the segment with, and the result is a new string with the segment changed:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 38,
+      "metadata": {
+        "id": "i3AOqtZU_Lo9",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "b249e15f-ac05-40a5-96d4-fe5975ab499d"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Blake Jackson is the best'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 38
+        }
+      ],
+      "source": [
+        "# Replace the old substring with the new target substring is the segment has been found in the string\n",
+        "\n",
+        "A = \"Michael Jackson is the best\"\n",
+        "B = A.replace('Michael', 'Janet')\n",
+        "C = B.replace('Janet', 'Blake') #변수\n",
+        "A\n",
+        "B\n",
+        "C\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "fzvobRb4_Lo9"
+      },
+      "source": [
+        "The method <code>find</code> finds a sub-string. The argument is the substring you would like to find, and the output is the first index of the sequence. We can find the sub-string <code>jack</code> or <code>el<code>.  "
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "tjE_sEpI_Lo9"
+      },
+      "source": [
+        "<img src=\"https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/PY0101EN/Chapter%201/Images/StringsFind.png\" width=\"600\" align=\"center\" />"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 39,
+      "metadata": {
+        "id": "AIavgjhh_Lo9",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "595590e0-a053-4f8e-a061-77938365fdcc"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "5"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 39
+        }
+      ],
+      "source": [
+        "# Find the substring in the string. Only the index of the first elment of substring in string will be the output\n",
+        "\n",
+        "Name = \"Michael Jackson\"\n",
+        "Name.find('el')"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 43,
+      "metadata": {
+        "id": "MIu6Yi7__Lo9",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "232e066e-b3f2-49c0-d505-94bba7b46a59"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "-1"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 43
+        }
+      ],
+      "source": [
+        "# Find the substring in the string.\n",
+        "\n",
+        "Name.find('sn')"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "zbLf9Au1_Lo9"
+      },
+      "source": [
+        "If the  sub-string is not in the string then the output is a negative one. For example, the string 'Jasdfasdasdf' is not a substring:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 44,
+      "metadata": {
+        "collapsed": true,
+        "id": "d-iT_Rt5_Lo-",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a1671a28-bc71-4c1e-fe33-dac5e6c04dd4"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "-1"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 44
+        }
+      ],
+      "source": [
+        "# If cannot find the substring in the string\n",
+        "\n",
+        "Name.find('Jasdfasdasdf')"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "qVhwWrIy_Lo-"
+      },
+      "source": [
+        "<hr>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "lrgX3Po1_Lo-"
+      },
+      "source": [
+        "<h2 id=\"Exercise\">Exercise Strings 1</h2>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9f9KdwEN_Lo-"
+      },
+      "source": [
+        "What is the value of the variable <code>A</code> after the following code is executed?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 71,
+      "metadata": {
+        "collapsed": true,
+        "id": "8TGPm5RN_Lo-",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "6e8912c6-3cbc-4ce0-e539-99d0894fbbc3"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'1'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 71
+        }
+      ],
+      "source": [
+        "# Write your code below and press Shift+Enter to execute\n",
+        "\n",
+        "A = \"1\"\n",
+        "A #1"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "1o05Qi3p_Lo-"
+      },
+      "source": [
+        "*Double*-click <b>here</b> for the solution.\n",
+        "\n",
+        "<!-- Your answer is below:\n",
+        "\"1\"\n",
+        "-->"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "XmtnRv7z_Lo-"
+      },
+      "source": [
+        "What is the value of the variable <code>B</code> after the following code is executed?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 72,
+      "metadata": {
+        "collapsed": true,
+        "id": "Z9GmC15W_Lo-",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "77b4ad09-5112-4530-a9d4-26cfcd387aa3"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'2'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 72
+        }
+      ],
+      "source": [
+        "# Write your code below and press Shift+Enter to execute\n",
+        "\n",
+        "B = \"2\"\n",
+        "B # 2"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "v5XCnEgH_Lo-"
+      },
+      "source": [
+        "Double-click <b>here</b> for the solution.\n",
+        "\n",
+        "<!-- Your answer is below:\n",
+        "\"2\"\n",
+        "-->"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "tAUOWle9_Lo_"
+      },
+      "source": [
+        "What is the value of the variable <code>C</code> after the following code is executed?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 73,
+      "metadata": {
+        "id": "jzII0Dh3_Lo_",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "9de93436-2b03-4726-f1dd-ce26650d5e7d"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'12'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 73
+        }
+      ],
+      "source": [
+        "# Write your code below and press Shift+Enter to execute\n",
+        "\n",
+        "C = A + B\n",
+        "C  #12"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "kpM7nJ4Q_Lo_"
+      },
+      "source": [
+        "Double-click <b>here</b> for the solution.\n",
+        "\n",
+        "<!-- Your answer is below:\n",
+        "\"12\"\n",
+        "-->"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "EWb95qFN_Lo_"
+      },
+      "source": [
+        "<hr>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "a4qDwwUx_Lo_"
+      },
+      "source": [
+        "Consider the variable <code>D</code> use slicing to print out the first three elements:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 52,
+      "metadata": {
+        "id": "cDP24HRe_Lo_",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "06c1689e-8582-45e7-82d4-8f37ecd09be9"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ABC\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Write your code below and press Shift+Enter to execute\n",
+        "\n",
+        "D = \"ABCDEFG\"\n",
+        "#print(D[0:3])\n",
+        "print(D[:3])"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "vjbKiN9W_Lo_"
+      },
+      "source": [
+        "Double-click <b>here</b> for the solution.\n",
+        "\n",
+        "<!-- Your answer is below:\n",
+        "print(D[:3])\n",
+        "# or\n",
+        "print(D[0:3])\n",
+        "-->"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "k7_D-zHc_Lo_"
+      },
+      "source": [
+        "<hr>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "4JKFWQWs_Lo_"
+      },
+      "source": [
+        "Use a stride value of 2 to print out every second character of the string <code>E</code>:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 53,
+      "metadata": {
+        "collapsed": true,
+        "id": "uhzR24xg_Lo_",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "77ae7498-9976-4bcd-df0a-b3aaa42ccdb6"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "correct\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Write your code below and press Shift+Enter to execute\n",
+        "\n",
+        "E = 'clocrkr1e1c1t'\n",
+        "\n",
+        "print(E[::2])"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "VFslk5O0_Lo_"
+      },
+      "source": [
+        "*Double*-click <b>here</b> for the solution.\n",
+        "\n",
+        "<!-- Your answer is below:\n",
+        "print(E[::2])\n",
+        "-->"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3jyLp4zT_LpA"
+      },
+      "source": [
+        "<hr>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ApiD63EB_LpA"
+      },
+      "source": [
+        "Print out a backslash:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 67,
+      "metadata": {
+        "id": "6OfgrTdo_LpA",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "07a3f0e8-d944-4c80-8f34-e8d8bc81f881"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\\\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Write your code below and press Shift+Enter to execute\n",
+        "\n",
+        "print (\"\\\\\")\n",
+        "#print(\"\\ \")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "VCi_5trc_LpA"
+      },
+      "source": [
+        "Double-click <b>here</b> for the solution.\n",
+        "<!-- Your answer is below:\n",
+        "print(\"\\\\\")\n",
+        "or\n",
+        "print(r\" \\ \")\n",
+        "-->"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0u_iOc4H_LpA"
+      },
+      "source": [
+        "<hr>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "usUoFDWx_LpA"
+      },
+      "source": [
+        "Convert the variable <code>F</code> to uppercase:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 70,
+      "metadata": {
+        "id": "wWJWplcf_LpA",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "b20775da-101f-4b57-96b5-8edbd444b933"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'YOU ARE WRONG'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 70
+        }
+      ],
+      "source": [
+        "# Write your code below and press Shift+Enter to execute\n",
+        "\n",
+        "F = \"You are wrong\"\n",
+        "F = F.upper()\n",
+        "#F"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "fl-e1mr0_LpA"
+      },
+      "source": [
+        "Double-click <b>here</b> for the solution.\n",
+        "\n",
+        "<!-- Your answer is below:\n",
+        "F.upper()\n",
+        "-->"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "xZasMHx2_LpA"
+      },
+      "source": [
+        "<hr>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "umixmVtH_LpA"
+      },
+      "source": [
+        "Consider the variable <code>G</code>, and find the first index of the sub-string <code>snow</code>:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 75,
+      "metadata": {
+        "id": "YNbQygft_LpA",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "47632fb0-26d7-4c1d-a258-6f644b67ce1a"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "95"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 75
+        }
+      ],
+      "source": [
+        "# Write your code below and press Shift+Enter to execute\n",
+        "\n",
+        "G = \"Mary had a little lamb Little lamb, little lamb Mary had a little lamb \\\n",
+        "Its fleece was white as snow And everywhere that Mary went Mary went, Mary went \\\n",
+        "Everywhere that Mary went The lamb was sure to go\"\n",
+        "\n",
+        "G_index = G.find(\"snow\")\n",
+        "G_index"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "UQ8l2fUB_LpB"
+      },
+      "source": [
+        "**Double**-click __here__ for the solution.\n",
+        "\n",
+        "<!-- Your answer is below:\n",
+        "G.find(\"snow\")\n",
+        "-->"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "j67KEnmX_LpB"
+      },
+      "source": [
+        "In the variable <code>G</code>, replace the sub-string <code>Mary</code> with <code>Bob</code>:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 76,
+      "metadata": {
+        "id": "t3ArDsom_LpB",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "a1e169dd-800d-4978-cca3-7f3bbaa68787"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Bob had a little lamb Little lamb, little lamb Bob had a little lamb Its fleece was white as snow And everywhere that Bob went Bob went, Bob went Everywhere that Bob went The lamb was sure to go'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 76
+        }
+      ],
+      "source": [
+        "# Write your code below and press Shift+Enter to execute\n",
+        "G = G.replace(\"Mary\", \"Bob\")\n",
+        "G"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "IpqiwAlH_LpB"
+      },
+      "source": [
+        "Double-click __here__ for the solution.\n",
+        "\n",
+        "<!-- Your answer is below:\n",
+        "G.replace(\"Mary\", \"Bob\")\n",
+        "-->"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "xL60yz0Q_LpB"
+      },
+      "source": [
+        "<hr>\n",
+        "<h2>The last exercise!</h2>\n",
+        "<p>Congratulations, you have completed your first lesson and hands-on lab in Python. However, there is one more thing you need to do. The Data Science community encourages sharing work. The best way to share and showcase your work is to share it on GitHub. By sharing your notebook on GitHub you are not only building your reputation with fellow data scientists, but you can also show it off when applying for a job. Even though this was your first piece of work, it is never too early to start building good habits. Please submit all your exercises to Github & let the traces in our LMS, so for me to access your work.\n",
+        "<hr>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ZPAAWlAS_LpB"
+      },
+      "source": [
+        "<hr>\n",
+        "<p>Copyright &copy; 2023 RYU HOKYOUNG based on 2018 IBM Developer Skills Network. This notebook and its source code are released under the terms of the <a href=\"https://cognitiveclass.ai/mit-license/\">MIT License</a>.</p>"
+      ]
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.6.8"
+    },
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
