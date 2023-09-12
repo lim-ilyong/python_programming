@@ -19,4 +19,8 @@ this repository 는 파이선 프로그래밍 수업 숙제를 위한 저장소 
   * del(dict['Thriller'])  : 삭제는 del함수 사용			
   * Thriller' in release_year_dict : key값이 있는지 체크			
 
-### [HomeWork 04주차-01]
+### [HomeWork 04주차-01](https://github.com/lim-ilyong/python_programming/blob/main/hw3/Conditions(%ED%95%99%EC%83%9D%EC%9A%A9).ipynb)
+  * if 조건 :
+  * elsif 조건 :
+  * else :
+  * 중요 : 과 indentation 중요
