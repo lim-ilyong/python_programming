@@ -35,4 +35,8 @@ this repository 는 파이선 프로그래밍 수업 숙제를 위한 저장소 
   * function 들여쓰기 주의
   * 전역변수, 지역변수
 
-  * 
+### [HomeWork 06주차-02](https://github.com/lim-ilyong/python_programming/blob/main/hw5/Classes(%ED%95%99%EC%83%9D%EC%9A%A9).ipynb)
+  * class , 생성자, method, 속성
+
+
+
