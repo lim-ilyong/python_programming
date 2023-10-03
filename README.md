@@ -61,6 +61,31 @@ this repository 는 파이선 프로그래밍 수업 숙제를 위한 저장소 
              file2.write(line)
 
 
+### [HomeWork 07주차-03](https://github.com/lim-ilyong/python_programming/blob/main/hw6/LoadData(Pandas)(%ED%95%99%EC%83%9D%EC%9A%A9).ipynb)
+  * [mount]
+    from google.colab import drive
+      drive.mount('/content/gdrive')
+
+    csv_path = '/content/gdrive/My Drive/Colab Notebooks/TopSellingAlbums.csv'
+    df = pd.read_csv(csv_path)
+    df1.head()
+    df.tail()
     
-    
+   y = df[['Artist','Length','Genre']]  
+   df.iloc[0, 0] #첫번째 행, 첫번째 열 
+   df.loc[0, 'Artist']
+
+   df.iloc[0:2, 0:3] #row, column sequence 
+
+   df.loc[0:2, 'Artist':'Released'] #iloc, loc의 차이점이 있음...
+
+   # iterating over rows using iterrows() function 
+
+   for i, j in df.iterrows():
+       print(i, j)
+       print()
+
+
+    다른 예.
+    filter2 = df["Claimed Sales (millions)"]>40
 
