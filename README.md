@@ -49,3 +49,18 @@ this repository 는 파이선 프로그래밍 수업 숙제를 위한 저장소 
          for line in file1:
              print(file1.readline())
 
+### [HomeWork 07주차-02](https://github.com/lim-ilyong/python_programming/blob/main/hw6/WriteFile(%ED%95%99%EC%83%9D%EC%9A%A9).ipynb)
+   * [mount]
+     from goole.colab import drive
+     drive.mount('/content/gdrive')
+   * [write]
+     example2 = "/content/gdrive/My Drive/Colab Notebooks/Example2.txt"
+     Lines = ["This is line A\n", "This is line B\n", "This is line C\n"]
+     with opne(example2, "w") as file2:
+         for line in Lines:
+             file2.write(line)
+
+
+    
+    
+
