@@ -7,3 +7,5 @@
 ## Quiz on writefile
 
  
+7주차 숙제3
+## Quiz on LoadData(pandas)
