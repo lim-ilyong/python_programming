@@ -39,4 +39,13 @@ this repository 는 파이선 프로그래밍 수업 숙제를 위한 저장소 
   * class , 생성자, method, 속성
 
 
+### [HomeWork 07주차-01](https://github.com/lim-ilyong/python_programming/blob/main/hw5/Classes(%ED%95%99%EC%83%9D%EC%9A%A9).ipynb)
+  * [mount]
+    from google.colab import drive
+    drive.mount('/content/gdrive')
+  * [read]
+    example1 = "/content/gdrive/My Drive/Colab Notebooks/Example1.txt"
+    with open(example1, "r") as file1:
+         for line in file1:
+             print(file1.readline())
 
