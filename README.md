@@ -29,3 +29,10 @@ this repository 는 파이선 프로그래밍 수업 숙제를 위한 저장소 
   * for i in range(-5,6) : 
   * while ( ) :
   * 중요 문법 : for 또는 while 끝에 :(콜론) 주의
+
+
+### [HomeWork 06주차-01](https://github.com/lim-ilyong/python_programming/blob/main/hw4/Loops(%ED%95%99%EC%83%9D%EC%9A%A9).ipynb)
+  * function 들여쓰기 주의
+  * 전역변수, 지역변수
+
+  * 
